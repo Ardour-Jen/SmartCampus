@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人中心</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 全局样式
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    /* 导航栏样式 */
+    nav {
+      background-color: #2D5CAC;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* 标题样式 */
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    /* 主页样式 */
+    .Home_Page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #c3c3c3;
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px);
+      z-index: -1;
+    }
+
+    .repair-header {
+      width: 100%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 10px;
+      margin-top: 5%;
+    }
+
+    .repair-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #4285F4;
+      margin-left: 5%;
+    }
+
+    .repair-count {
+      font-size: 20px;
+      color: #666;
+      margin-left: 8px;
+    }
+
+    .big {
+      height: 400px;
+    }
+
+    .b1 {
+      margin-top: 5px;
+      position: relative;
+      height: 80px;
+      background-color: #fff;
+      border-radius: 1px;
+      border: #313131;
+    }
+
+    .he {
+      height: 20px;
+      background-color: #fff;
+      color: #666;
+      line-height: 20px;
+    }
+
+    .ing {
+      width: 200px;
+      height: 50px;
+    }
+
+    .ing img {
+      height: 60px;
+    }
+
+    .ed {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      color: #666;
+    }
+
+    .e {
+      height: 15px;
+      text-align: center;
+      line-height: 10px;
+      color: #666;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .a1 {
+      background-color: #c3c3c3;
+    }
+  </style> */
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+    <ul>
+      <li><a href="index.html">主页</a></li>
+      <li><a href="delivery.html">代拿/代取</a></li>
+      <li><a href="canteen.html">食堂帮送</a></li>
+      <li><a href="supermarket.html">超市跑腿</a></li>
+      <li><a href="附近推荐.html">附近推荐</a></li>
+      <li><a href="help_center.html">帮助中心</a></li>
+      <li><a href="个人中心.html">个人中心</a></li>
+    </ul>
+  </nav>
+
+  <!-- 个人中心内容 -->
+  <div class="box11">
+    <h2>个人中心</h2>
+    <div class="navbar">
+      <a class="a1" href="#orders">我的订单</a>
+      <a href="#reviews">我的评价</a>
+      <a href="#ai-report">AI分析报告</a>
+    </div>
+
+    <!-- 欢迎信息 -->
+    <div style="margin-top: 20px; padding: 20px; text-align: center;">
+      <h2>欢迎来到您的个人页面</h2>
+      <p>请通过上面的导航栏访问您的订单、评价和AI分析报告。</p>
+    </div>
+
+    <!-- 订单信息 -->
+    <div class="Home_Page">
+      <div class="background"></div>
+      <div class="repair-header">
+        <span class="repair-title">我的订单:</span>
+        <span class="repair-count">1</span>
+      </div>
+      <div class="box11"></div>
+    </div>
+
+    <!-- 订单列表 -->
+    <div class="big">
+      <div class="b1">
+        <div class="he">代拿/代取</div>
+        <div class="ing"><img src="img/OIP-C (7).jpg" alt="Order Image"></div>
+        <div class="ed">待接单</div>
+      </div>
+    </div>
+    <div class="e">已到底...</div>
+
+    <!-- 联系信息 -->
+    <div class="box22">
+      <a href="#">
+        <div class="box23">关于我们 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系我们 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;友情链接</div>
+        <div class="box30">咨询热线 0351-2154756 &nbsp;&nbsp;&nbsp;投诉电话0351-2154756</div>
+        <div class="box28"><img src="upload/49.jpg" alt="WeChat Support">
+          <p>微信客服</p>
+          <p>每周一到周日 8:30-24:00</p>
+        </div>
+      </a>
+      <div class="box29"></div>
+    </div>
+  </div>
+</body>
+
+</html>

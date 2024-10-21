@@ -1,0 +1,113 @@
+ /* 页面基础样式 */
+ body {
+    font-family: Arial, sans-serif; /* 设置字体 */
+    margin: 0; /* 去除默认外边距 */
+    padding: 0; /* 去除默认内边距 */
+    background-color: #f7f7f7; /* 设置背景颜色 */
+    display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100vh; /* 设置视口高度 */
+    text-align: center; /* 文本居中 */
+}
+
+/* 顶部导航样式 */
+.header {
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部对齐 */
+    width: 100%; /* 宽度占满 */
+    padding: 20px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    display: flex; /* 使用 flex 布局 */
+    justify-content: space-between; /* 子元素两端对齐 */
+    align-items: center; /* 子元素垂直居中 */
+}
+
+.header .logo01 {
+    font-size: 30px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    color: #f8991d; /* 字体颜色 */
+    padding-left: 40px;
+}
+
+.header .logo02 {
+    font-size: 20px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    color: #f8991d; /* 字体颜色 */
+    padding-right: 1000px;
+    padding-top: 14px;
+}
+
+.header .blog {
+    font-size: 16px; /* 字体大小 */
+    color: #555; /* 字体颜色 */
+}
+
+.header .register-button {
+    background-color: #007bff; /* 背景颜色 */
+    color: white; /* 字体颜色 */
+    padding: 10px 20px; /* 内边距 */
+    border: none; /* 无边框 */
+    border-radius: 15px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标指针样式 */
+}
+
+.container {
+    max-width: 1200px; /* 最大宽度 */
+    background-color: #fff; /* 背景颜色 */
+    padding: 50px; /* 内边距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    text-align: center; /* 文本居中 */
+    margin-top: 100px; /* 顶部外边距 */
+}
+
+/* 标题部分样式 */
+.container h1 {
+    font-size: 32px; /* 字体大小 */
+    color: #333; /* 字体颜色 */
+    margin-bottom: 20px; /* 底部外边距 */
+}
+
+.container p {
+    font-size: 18px; /* 字体大小 */
+    color: #555; /* 字体颜色 */
+    margin-bottom: 40px; /* 底部外边距 */
+}
+
+/* 按钮样式 */
+.container .btn01 {
+    padding: 15px 30px; /* 内边距 */
+    background-color: #007bff; /* 背景颜色 */
+    color: white; /* 字体颜色 */
+    border: none; /* 无边框 */
+    border-radius: 15px; /* 圆角边框 */
+    font-size: 18px; /* 字体大小 */
+    cursor: pointer; /* 鼠标指针样式 */
+    margin: 15px; /* 按钮之间的间距 */
+}
+
+.container .btn02 {
+    padding: 15px 30px; /* 内边距 */
+    background-color: white; /* 背景颜色 */
+    color: #007bff; /* 字体颜色 */
+    border-radius: 15px; /* 圆角边框 */
+    font-size: 18px; /* 字体大小 */
+    cursor: pointer; /* 鼠标指针样式 */
+    margin: 15px; /* 按钮之间的间距 */
+    border: 2px solid #007bff; /* 边框样式 */
+}
+
+/* 底部注释部分样式 */
+.footer {
+    margin-top: 50px; /* 顶部外边距 */
+    font-size: 16px; /* 字体大小 */
+    color: #888; /* 字体颜色 */
+}
+
+/* 图片样式 */
+.container img {
+    max-width: 100%; /* 最大宽度 */
+    height: auto; /* 高度自适应 */
+    margin-top: 20px; /* 顶部外边距 */
+}
