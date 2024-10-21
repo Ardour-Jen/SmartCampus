@@ -35,7 +35,7 @@
     font-size: 20px; /* 字体大小 */
     font-weight: bold; /* 字体加粗 */
     color: #f8991d; /* 字体颜色 */
-    padding-right: 1000px;
+    padding-right: 950px;
     padding-top: 14px;
 }
 
@@ -54,30 +54,39 @@
 }
 
 .container {
-    max-width: 1200px; /* 最大宽度 */
     background-color: #fff; /* 背景颜色 */
     padding: 50px; /* 内边距 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
     text-align: center; /* 文本居中 */
     margin-top: 100px; /* 顶部外边距 */
+    align-self: center; /* 垂直居中 */
+    width: 100%; /* 宽度占满 */
+    height: 50%; /* 高度占满 */
+    transform: translateY(-145px); /* 向上移动 */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
 }
 
 /* 标题部分样式 */
-.container h1 {
+.container .CallWord01 {
     font-size: 32px; /* 字体大小 */
     color: #333; /* 字体颜色 */
     margin-bottom: 20px; /* 底部外边距 */
+    transform: translateX(0px); /* 向左移动 */
+    text-align: left; /* 左对齐 */
 }
 
-.container p {
+.container .CallWord02 {
     font-size: 18px; /* 字体大小 */
     color: #555; /* 字体颜色 */
     margin-bottom: 40px; /* 底部外边距 */
+    transform: translateX(0px); /* 向左移动 */
+    text-align: left; /* 左对齐 */
 }
 
 /* 按钮样式 */
 .container .btn01 {
-    padding: 15px 30px; /* 内边距 */
+    padding: 24px 60px; /* 内边距 */
     background-color: #007bff; /* 背景颜色 */
     color: white; /* 字体颜色 */
     border: none; /* 无边框 */
@@ -85,10 +94,11 @@
     font-size: 18px; /* 字体大小 */
     cursor: pointer; /* 鼠标指针样式 */
     margin: 15px; /* 按钮之间的间距 */
+    transform: translateX(-555px); /* 向左移动 */
 }
 
 .container .btn02 {
-    padding: 15px 30px; /* 内边距 */
+    padding: 24px 60px; /* 内边距 */
     background-color: white; /* 背景颜色 */
     color: #007bff; /* 字体颜色 */
     border-radius: 15px; /* 圆角边框 */
@@ -96,6 +106,7 @@
     cursor: pointer; /* 鼠标指针样式 */
     margin: 15px; /* 按钮之间的间距 */
     border: 2px solid #007bff; /* 边框样式 */
+    transform: translateX(-520px); /* 向左移动 */
 }
 
 /* 底部注释部分样式 */
