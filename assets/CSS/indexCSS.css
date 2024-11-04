@@ -122,18 +122,18 @@ body {
 
 /* 标题部分样式 */
 .container .CallWord01 {
-    font-size: 60px; /* 字体大小 */
+    font-size: 48px; /* 字体大小 */
     color: #333; /* 字体颜色 */
     margin-bottom: 20px; /* 底部外边距 */
-    transform: translate(435px,100px); 
+    transform: translate(280px,100px); 
     text-align: left; /* 左对齐 */
 }
 
 .container .CallWord02 {
-    font-size: 20px; /* 字体大小 */
+    font-size: 15px; /* 字体大小 */
     color: gray; /* 字体颜色 */
     margin-bottom: 40px; /* 底部外边距 */
-    transform: translate(490px,145px); 
+    transform: translate(320px,145px); 
     text-align: left; /* 左对齐 */
     font-style: italic; /* 斜体字 */
 }
