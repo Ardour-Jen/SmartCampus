@@ -5,69 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我要跑腿</title>
     <link rel="stylesheet" href="../assets/CSS/OrderCSS.css">
+    <link rel="stylesheet" href="">
 </head>
 <body>
-
+    
 <div class="course-container">
     <ul class="course-list">
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="软件工程" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="一食堂" class="course-image">
             <div class="course-info">
                 <p class="course-title">一食堂</p>
                 <p class="course-teacher">位置：校内</p>
             </div>
         </li>
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="算法导论" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="二食堂" class="course-image">
             <div class="course-info">
                 <p class="course-title">二食堂</p>
                 <p class="course-teacher">位置：校内</p>
             </div>
         </li>
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="软件工程实践" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="三食堂" class="course-image">
             <div class="course-info">
                 <p class="course-title">三食堂</p>
                 <p class="course-teacher">位置：校内</p>
             </div>
         </li>
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="编程技术2024" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="天猫超市" class="course-image">
             <div class="course-info">
                 <p class="course-title">天猫超市</p>
                 <p class="course-teacher">位置：校内->桃苑</p>
             </div>
         </li>
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="Java语言及网络编程" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="小超市01" class="course-image">
             <div class="course-info">
                 <p class="course-title">小超市01</p>
                 <p class="course-teacher">位置：校内->梅苑</p>
             </div>
         </li>
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="文献检索与学术写作" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="小超市02" class="course-image">
             <div class="course-info">
                 <p class="course-title">小超市02</p>
                 <p class="course-teacher">位置：校内->竹苑</p>
             </div>
         </li>
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="文献检索与学术写作" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="菜鸟驿站" class="course-image">
             <div class="course-info">
                 <p class="course-title">菜鸟驿站</p>
                 <p class="course-teacher">位置：校内->桃苑</p>
             </div>
         </li>
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="文献检索与学术写作" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="菜鸟驿站" class="course-image">
             <div class="course-info">
                 <p class="course-title">菜鸟驿站</p>
                 <p class="course-teacher">位置：校内->梅苑</p>
             </div>
         </li>
         <li class="course-item">
-            <img src="https://via.placeholder.com/260x150" alt="文献检索与学术写作" class="course-image">
+            <img src="https://via.placeholder.com/260x150" alt="菜鸟驿站" class="course-image">
             <div class="course-info">
                 <p class="course-title">菜鸟驿站</p>
                 <p class="course-teacher">位置：校内->兰苑</p>
@@ -75,6 +76,33 @@
         </li>
     </ul>
 </div>
+
+<div id="ObjInformationFrame" class="ObjInformation">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>填写信息</h2>
+        <form>
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="name">物品类型:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="address">具体位置:</label>
+            <input type="text" id="address" name="address"><br><br>
+
+            <label for="image">上传图片:</label>
+            <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+            <label for="urgent">是否为加急件:</label>
+            <input type="checkbox" id="urgent" name="urgent"><br><br>
+
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</div>
+
+<script src="../assets/JS/OrderJS.js"></script>
 
 </body>
 </html>
