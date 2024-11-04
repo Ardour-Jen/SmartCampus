@@ -33,7 +33,7 @@ body {
     object-fit: cover; /* 保持图片比例 */
     display: block; /* 块级元素 */
     margin: 0 auto; /* 水平居中 */
-    transform: translate(-750px, -575px); /* 向上移动 */
+    transform: translate(-550px, -450px); /* 向上移动 */
     z-index: 9999; /* 显示为最高层 */
 }
 
