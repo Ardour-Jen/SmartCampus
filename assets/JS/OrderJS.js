@@ -24,4 +24,22 @@
         }
     }
 
+    // 获取复选框元素
+var checkYes = document.getElementById("CheckYes");
+var checkNo = document.getElementById("CheckNo");
+
+// 添加点击事件监听器
+checkYes.addEventListener("change", function() {
+    
+    if (checkYes.checked) {
+        checkNo.checked = false;
+    }
+});
+
+checkNo.addEventListener("change", function() {
+    
+    if (checkNo.checked) {
+        checkYes.checked = false;
+    }
+});
     

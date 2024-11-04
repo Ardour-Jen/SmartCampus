@@ -79,23 +79,28 @@
 
 <div id="ObjInformationFrame" class="ObjInformation">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="document.getElementById('ObjInformationFrame').style.display='none'">&times;</span>
         <h2>填写信息</h2>
         <form>
             <label for="name">姓名:</label>
-            <input type="text" id="name" name="name"><br><br>
+            <input type="text" id="name" name="name">
 
-            <label for="name">物品类型:</label>
-            <input type="text" id="name" name="name"><br><br>
+            <label for="type">物品类型:</label>
+            <input type="text" id="type" name="type">
 
             <label for="address">具体位置:</label>
-            <input type="text" id="address" name="address"><br><br>
+            <input type="text" id="address" name="address">
 
             <label for="image">上传图片:</label>
-            <input type="file" id="image" name="image" accept="image/*"><br><br>
+            <input type="file" id="image" name="image" accept="image/*">
 
             <label for="urgent">是否为加急件:</label>
-            <input type="checkbox" id="urgent" name="urgent"><br><br>
+            <div class="checkbox-container">
+                <input type="checkbox" id="CheckYes" name="CheckYes">
+                <label for="CheckYes">是</label>
+                <input type="checkbox" id="CheckNo" name="CheckNo">
+                <label for="CheckNo">否</label>
+            </div>
 
             <input type="submit" value="提交">
         </form>
