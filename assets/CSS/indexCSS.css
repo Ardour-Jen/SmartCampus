@@ -72,10 +72,10 @@ body {
 .text01 { 
     position: absolute; /* 使其绝对定位 */
     margin-top: 50px; /* 顶部外边距 */
-    font-size: 20px; /* 字体大小 */
+    font-size: 15px; /* 字体大小 */
     color: #555; /* 字体颜色 */
     text-align: left; /* 左对齐 */
-    transform: translate(0px,450px); /* X移动 ，Y移动  */
+    transform: translate(0px,350px); /* X移动 ，Y移动  */
     line-height: 1.6; /* 调整行间距 */
     font-style: italic; /* 斜体字 */
 }
@@ -111,8 +111,8 @@ body {
 
 
 .Theme01  {
-    width: 550px; /* 设置图片宽度 */
-    height: 550px; /* 设置图片高度 */
+    width: 400px; /* 设置图片宽度 */
+    height: 400px; /* 设置图片高度 */
     border-radius: 25px; /* 设置图片圆角 */
     object-fit: cover; /* 保持图片比例 */
     display: block; /* 块级元素 */
