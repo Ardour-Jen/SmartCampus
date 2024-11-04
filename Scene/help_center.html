@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>帮助中心 - 文心一言</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <ul>
+            <li><a href="../index.html">主页</a></li>
+            <li><a href="delivery.html">代拿/代取</a></li>
+            <li><a href="canteen.html">食堂帮送</a></li>
+            <li><a href="supermarket.html">超市跑腿</a></li>
+            <li><a href="附近推荐.html">附近推荐</a></li>
+            <li><a href="help_center.html">帮助中心</a></li>
+            <li><a href="个人中心.html">个人中心</a></li>
+        </ul>
+    </nav>
+    <h2>帮助中心 - 文心一言</h2>
+    <form id="questionForm">
+        <input type="text" id="question" placeholder="请输入您的问题" required>
+        <button type="submit">获取回答</button>
+    </form>
+    <div id="response"></div>
+
+    <script>
+        async function askQuestion() {
+            const question = document.getElementById('question').value;
+            if (!question) {
+                alert('请输入一个问题。');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3306/ask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ question: question })
+                });
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                // Display only the 'result' field from the response
+                document.getElementById('response').innerText = data.result || '未找到结果';
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('response').innerText = '发生错误，请重试。';
+            }
+        }
+
+        document.getElementById('questionForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            await askQuestion();
+        });
+    </script>
+</body>
+
+</html>

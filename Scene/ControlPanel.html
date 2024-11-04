@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>个人中心</title>
   <style>
+    html, body {
+      height: 100%; /* 确保html和body的高度为100% */
+      margin: 0; /* 去掉默认的外边距 */
+      overflow: hidden; /* 去掉滚动条 */
+    }
+
     body {
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
       background-color: #f4f4f9;
     }
 
@@ -56,7 +60,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
       flex-grow: 1;
     }
 
@@ -80,6 +83,17 @@
 
     .navbar a:hover {
       background-color: #3367D6;
+    }
+
+    /* 小框样式 */
+    .content-frame {
+      width: 100%;
+      height: calc(100% - 80px); /* 设置为100%减去导航栏的高度 */
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
     }
 
     /* 订单信息样式 */
@@ -134,8 +148,8 @@
     /* 联系信息 */
     .contact-info {
       text-align: center;
-      margin-top: 20px;
-      font-size: 0.9em;
+      margin-top: 10px;
+      font-size: 0.6em;
       color: #666;
     }
 
@@ -144,56 +158,36 @@
       vertical-align: middle;
     }
   </style> 
+  <script>
+    function loadPage(url) {
+      document.getElementById('contentFrame').src = url;
+    }
+  </script>
 </head>
 
 <body>
   <!-- 导航栏 -->
   <nav>
-    <!-- <div class="logo"><img src="image/logo.png" alt="Logo"></div> -->
     <ul>
       <li><a href="../index.html">主页</a></li>
-      <li><a href="delivery.html">代拿/代取</a></li>
-      <li><a href="canteen.html">食堂帮送</a></li>
-      <li><a href="supermarket.html">超市跑腿</a></li>
-      <li><a href="附近推荐.html">附近推荐</a></li>
-      <li><a href="help_center.html">帮助中心</a></li>
-      <li><a href="个人中心.html">个人中心</a></li>
+      <li><a href="#" onclick="loadPage('delivery.html')">代拿/代取</a></li>
+      <li><a href="#" onclick="loadPage('canteen.html')">食堂帮送</a></li>
+      <li><a href="#" onclick="loadPage('supermarket.html')">超市跑腿</a></li>
+      <li><a href="#" onclick="loadPage('附近推荐.html')">附近推荐</a></li>
+      <li><a href="#" onclick="loadPage('help_center.html')">帮助中心</a></li>
+      <li><a href="#" onclick="loadPage('个人中心.html')">个人中心</a></li>
     </ul>
   </nav>
 
-  <!-- 个人中心内容 -->
   <div class="personal-center">
-    <div class="navbar">
-      <a href="#orders">我的订单</a>
-      <a href="#reviews">我的评价</a>
-      <a href="#ai-report">AI分析报告</a>
-    </div>
-
-    <!-- 欢迎信息 -->
-    <div style="text-align: center;">
-      <h2>欢迎来到您的个人页面</h2>
-      <p>请通过上面的导航栏访问您的订单、评价和AI分析报告。</p>
-    </div>
-
-    <!-- 订单信息 -->
-    <div class="Home_Page">
-      <div class="repair-header">
-        <span class="repair-title">我的订单:</span>
-        <span class="repair-count">1</span>
-      </div>
-      <div class="big">
-        <div class="order-card">
-          <img src="image/OIP-C (7).jpg" alt="Order Image">
-          <div>代拿/代取</div>
-          <span class="order-status">待接单</span>
-        </div>
-      </div>
+    <div class="content-frame">
+      <iframe id="contentFrame" src="" style="width: 100%; height: 100%; border: none;"></iframe>
     </div>
 
     <!-- 联系信息 -->
     <div class="contact-info">
       <p>关于我们 &nbsp;&nbsp; 联系我们 &nbsp;&nbsp; 友情链接</p>
-      <p>咨询热线: 0351-2154756 &nbsp;&nbsp; 投诉电话: 0351-2154756</p>
+      <!-- <p>咨询热线: 0351-2154756 &nbsp;&nbsp; 投诉电话: 0351-2154756</p> -->
       <p>
         <img src="../assets/image/wechat.png" alt="WeChat Support"> 微信客服: 每周一到周日 8:30-24:00
       </p>

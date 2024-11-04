@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>E校园 - 超市跑腿</title>
+    <script src="https://api.map.baidu.com/api?v=3.0&ak=q4kWTI0TDSL3n2iSNMLD1XcZg90P5Ujl"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        nav {
+            background-color: #2D5CAC;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .banner {
+            margin-top: 10px;
+            position: relative;
+            height: 421px;
+
+
+        }
+
+        .banner .w {
+            background-color: #2D5CAC;
+            height: 421px;
+
+            background-size: 1200px 421px;
+
+        }
+
+        .box222 {
+            width: 1010px;
+            height: 421px;
+            float: right;
+        }
+
+        video {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            /* width: 100%; */
+            transform: scaleX(1010px);
+            transform: translateX(160px);
+            height: 100%;
+
+        }
+
+        .banner .sub_nav {
+            z-index: 2;
+            float: left;
+            width: 190px;
+            height: 421px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .sub_nav ul {
+            margin: 0 20px;
+        }
+
+        .sub_nav ul li a {
+            color: #fff;
+            font-size: 14px;
+            line-height: 45px;
+
+        }
+
+        .sub_nav ul li span {
+            float: right;
+        }
+
+        .ball {
+            position: absolute;
+            bottom: 10px;
+            left: 400px;
+        }
+
+        .ball ul {
+            width: 400px;
+            height: 50px;
+        }
+
+        .ball ul li {
+            margin-left: 10px;
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        form input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+
+        .box1 {
+            background-image: url(img/v2-ac291e16e8972ea1ff4f24225907e6dd_r.jpg);
+        }
+
+        #map {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .chao {
+            width: 940px;
+            height: 500px;
+
+            position: absolute;
+            right: 200px;
+            top: 0px;
+        }
+
+        .chao ul li {
+            float: left;
+            width: 172x;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .chao ul li img {
+            width: 172px;
+            height: 210px;
+
+        }
+
+        #service button {
+            background-color: rgb(20, 87, 244);
+            border: 1px solid rgb(20, 87, 244);
+            padding: 12px 20px;
+            border-radius: 7px;
+            transition: .3s;
+            color: #fff;
+        }
+
+        #service button :hover {
+            border: 1px solid rgb(20, 87, 244);
+            background-color: transparent;
+            color: rgb(20, 87, 244);
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <ul>
+            <li><a href="../index.html">主页</a></li>
+            <li><a href="delivery.html">代拿/代取</a></li>
+            <li><a href="canteen.html">食堂帮送</a></li>
+            <li><a href="supermarket.html">超市跑腿</a></li>
+            <li><a href="附近推荐.html">附近推荐</a></li>
+            <li><a href="help_center.html">帮助中心</a></li>
+            <li><a href="个人中心.html">个人中心</a></li>
+        </ul>
+    </nav>
+    <form id="serviceForm">
+        <label for="service">请输入需要的服务:</label>
+        <input type="text" id="service" name="service" placeholder="例如：薯片" required><button type="button">确定</button>
+    </form>
+    <div class="banner">
+
+        <div class="w">
+
+
+            <div class="sub_nav">
+                <ul>
+                    <li><a href="#">鲜花礼物<span>&gt;</span></a>
+
+                    <li><a href="vido/QQ视频20231124113639.mp4">牛乳冻品<span>&gt;</span></a>
+
+                    <li><a href="#">买药秒送<span>&gt;</span></a>
+
+                    <li><a href="#">生鲜蔬菜<span>&gt;</span></a>
+
+                    <li><a href="#">熟食热饮<span>&gt;</span></a>
+
+                    <li><a href="#">电子数码<span>&gt;</span></a>
+
+                    <li><a href="#">零食美味<span>&gt;</span></a>
+
+                    <li><a href="#">文具生活<span>&gt;</span></a>
+
+                    <li><a href="#">家具用品<span>&gt;</span></a>
+
+                </ul>
+                <div class="chao">
+                    <ul>
+                        <li><img src="img/屏幕截图 2024-10-09 134606.png" alt=""></li>
+                        <li><img src="img/屏幕截图 2024-10-09 134628.png" alt="">
+                        </li>
+                        <li><img src="img/屏幕截图 2024-10-09 134745.png" alt=""></li>
+                        <li><img src="img/屏幕截图 2024-10-09 134817.png" alt=""></li>
+                        <li><img src="img/屏幕截图 2024-10-09 134908.png" alt="">
+                        </li>
+                        <li><img src="img/屏幕截图 2024-10-09 134924.png" alt=""></li>
+                        <li><img src="img/屏幕截图 2024-10-09 134953.png" alt=""></li>
+                        <li><img src="img/屏幕截图 2024-10-09 135022.png" alt="">
+                        </li>
+                        <li><img src="img/屏幕截图 2024-10-09 135143.png" alt=""></li>
+                        <li><img src="img/屏幕截图 2024-10-09 135118.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="map"></div>
+            <script>
+                var map = new BMap.Map("map");
+                map.centerAndZoom(new BMap.Point(117.192, 34.216), 15); // 设置地图中心为中国矿业大学
+
+                var geoc = new BMap.Geocoder();
+
+                document.getElementById('routeForm').addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    var startAddress = document.getElementById('start').value;
+                    var endAddress = document.getElementById('end').value;
+
+                    geoc.getPoint(startAddress, function (startPoint) {
+                        if (startPoint) {
+                            geoc.getPoint(endAddress, function (endPoint) {
+                                if (endPoint) {
+                                    var riding = new BMap.RidingRoute(map, {
+                                        renderOptions: { map: map, autoViewport: true }
+                                    });
+                                    riding.search(startPoint, endPoint);
+                                } else {
+                                    alert("无法解析终点地址");
+                                }
+                            });
+                        } else {
+                            alert("无法解析起点地址");
+                        }
+                    });
+                });
+            </script>
+            <div class="box22">
+                <a href="">
+                    <div class="box23">关于我们 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系我们 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;友情链接
+                    </div>
+                    <div class="box30">咨询热线 0351-2154756 &nbsp;&nbsp;&nbsp;投诉电话0351-2154756</div>
+                    <div class="box28"><img src="upload/49.jpg" alt="">
+                        <p>微信客服</p>
+                        <p>每周一到周日 8:30-24:00</p>
+                    </div>
+                </a>
+                <div class="box29"></div>
+            </div>
+</body>
+
+</html>
