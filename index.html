@@ -6,36 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Draw.io Clone</title>
     <link rel="stylesheet" href="./assets/CSS/indexCSS.css">
+    <img src="./assets/Pic/HeadPic.png" alt="Diagram Example" class="HeadPic">
 </head>
 <body>
 
     <!-- 顶部导航栏 -->
     <div class="header">
         <div class="logo01">智慧校园系统</div>
-        <div class="logo02">SmartCampusSystem</div>
-        <button class="register-button">注册 Register</button>
+        <!-- <div class="logo02">SmartCampusSystem</div> -->
+        <button class="Morebutton">更多</button>
     </div>
 
     <!-- 页面主体内容容器 -->
     <div class="container">
-        <h1 class="CallWord01">Security-first diagramming <br> for teams.</h1>
-        <p class="CallWord02">Bring your storage to our online tool, or save locally <br> with the desktop app.</p>
+        <h1 class="CallWord01">智慧校园服务系统<br></h1>
+        <h2 class="CallWord02">智慧校园，让生活更便捷、让服务更贴心 </h2>
 
         <!-- 开始和下载按钮 -->
-        <button class="btn01">登录</button>
+        <button class="btn01" onclick="showLoginBox()" >登录</button>
         <button class="btn02">注册</button>
 
-        <!-- 描述文字 -->
-        <p>添加描述文件</p>
-
         <!-- 示例图片 -->
-        <img src="image.png" alt="Diagram Example">
+        <img src="./assets/Pic/Theme01.png" alt="Diagram Example" class="Theme01">
 
-        <!-- 底部注释信息 -->
-        <div class="footer">
-            Diagram files created in 2005 will load in the app today
-        </div>
     </div>
 
+    <div id="loginBox" >
+        <h2>登录</h2>
+        <form>
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="button" onclick="(() => { window.location.href = './Scene/ControlPanel.html'; })()">确认</button>
+
+            <button type="button" onclick="hideLoginBox()">关闭</button>
+        </form>
+    </div>
+
+
+    <!-- 文字信息 -->
+    <p class="text01">
+        <br>欢迎! 我们的系统旨在通过数字化平台提升校园管理和学习体验。借助先进的技术,我们提供在线学习、课程管理、校园通知和社交互动等功能，助力师生更高效地沟通
+        <br>个智能、便捷的校园环境。
+        <br>Welcome! Our system aims to enhance campus management and learning experiences through a digital platform. With advanced technology,we offer features such 
+        <br>as online learning, course management, campus notifications, and social interaction.
+    </p>
+
+    <script src="./assets/JS/indexJS.js"></script>
 </body>
 </html>

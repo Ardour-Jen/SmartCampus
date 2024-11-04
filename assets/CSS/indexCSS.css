@@ -1,5 +1,4 @@
- /* 页面基础样式 */
- body {
+body {
     font-family: Arial, sans-serif; /* 设置字体 */
     margin: 0; /* 去除默认外边距 */
     padding: 0; /* 去除默认内边距 */
@@ -9,6 +8,8 @@
     align-items: center; /* 垂直居中 */
     height: 100vh; /* 设置视口高度 */
     text-align: center; /* 文本居中 */
+    width: 100vw; /* 设置视口宽度 */
+    overflow: hidden; /* 隐藏溢出内容 */
 }
 
 /* 顶部导航样式 */
@@ -24,6 +25,18 @@
     align-items: center; /* 子元素垂直居中 */
 }
 
+.HeadPic {
+    position: absolute; /* 使其绝对定位 */
+    width: 50px; /* 设置图片宽度 */
+    height: 50px; /* 设置图片高度 */
+    border-radius: 50%; /* 设置图片圆角 */
+    object-fit: cover; /* 保持图片比例 */
+    display: block; /* 块级元素 */
+    margin: 0 auto; /* 水平居中 */
+    transform: translate(-750px, -575px); /* 向上移动 */
+    z-index: 9999; /* 显示为最高层 */
+}
+
 .header .logo01 {
     font-size: 30px; /* 字体大小 */
     font-weight: bold; /* 字体加粗 */
@@ -35,7 +48,7 @@
     font-size: 20px; /* 字体大小 */
     font-weight: bold; /* 字体加粗 */
     color: #f8991d; /* 字体颜色 */
-    padding-right: 950px;
+    padding-right: 1400px;
     padding-top: 14px;
 }
 
@@ -44,49 +57,99 @@
     color: #555; /* 字体颜色 */
 }
 
-.header .register-button {
+.header .Morebutton {
+    padding: 15px 70px; /* 内边距 */
     background-color: #007bff; /* 背景颜色 */
     color: white; /* 字体颜色 */
-    padding: 10px 20px; /* 内边距 */
     border: none; /* 无边框 */
     border-radius: 15px; /* 圆角边框 */
+    font-size: 18px; /* 字体大小 */
     cursor: pointer; /* 鼠标指针样式 */
+    transform: translate(-30px, 0px); /* 移动位置 */
+}
+
+/* 底部注释部分样式 */
+.text01 { 
+    position: absolute; /* 使其绝对定位 */
+    margin-top: 50px; /* 顶部外边距 */
+    font-size: 20px; /* 字体大小 */
+    color: #555; /* 字体颜色 */
+    text-align: left; /* 左对齐 */
+    transform: translate(0px,450px); /* X移动 ，Y移动  */
+    line-height: 1.6; /* 调整行间距 */
+    font-style: italic; /* 斜体字 */
 }
 
 .container {
-    background-color: #fff; /* 背景颜色 */
-    padding: 50px; /* 内边距 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
-    text-align: center; /* 文本居中 */
-    margin-top: 100px; /* 顶部外边距 */
-    align-self: center; /* 垂直居中 */
-    width: 100%; /* 宽度占满 */
-    height: 50%; /* 高度占满 */
-    transform: translateY(-145px); /* 向上移动 */
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: absolute; /* 使其绝对定位 */
+    top: 220px; /* 根据需要调整位置 */
+    left: 50%; /* 根据需要调整位置 */
+    transform: translate(-50%, -120px); /* 水平居中并向上移动 */
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
+}
 
+#loginBox {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95); /* 半透明白色背景 */
+    padding: 150px;
+    border: 4px solid orange; /* 橙色边框 */
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* 阴影效果 */
+    text-align: center;
+    width: 800px; /* 根据需要设置宽度 */
+    height: 500px; /* 根据需要设置高度 */
+}
+
+
+.Theme01  {
+    width: 550px; /* 设置图片宽度 */
+    height: 550px; /* 设置图片高度 */
+    border-radius: 25px; /* 设置图片圆角 */
+    object-fit: cover; /* 保持图片比例 */
+    display: block; /* 块级元素 */
+    margin: 0 auto; /* 水平居中 */
+    transform: translate(350px,-200px); /* 向上移动 */
 }
 
 /* 标题部分样式 */
 .container .CallWord01 {
-    font-size: 32px; /* 字体大小 */
+    font-size: 60px; /* 字体大小 */
     color: #333; /* 字体颜色 */
     margin-bottom: 20px; /* 底部外边距 */
-    transform: translateX(0px); /* 向左移动 */
+    transform: translate(435px,100px); 
     text-align: left; /* 左对齐 */
 }
 
 .container .CallWord02 {
-    font-size: 18px; /* 字体大小 */
-    color: #555; /* 字体颜色 */
+    font-size: 20px; /* 字体大小 */
+    color: gray; /* 字体颜色 */
     margin-bottom: 40px; /* 底部外边距 */
-    transform: translateX(0px); /* 向左移动 */
+    transform: translate(490px,145px); 
+    text-align: left; /* 左对齐 */
+    font-style: italic; /* 斜体字 */
+}
+/* 艺术字体样式 */
+.artText {
+    font-family: 'Brush Script MT', cursive; /* 使用艺术字体 */
+    font-size: 40px; /* 字体大小 */
+    color: #ff6347; /* 字体颜色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+    transform: translate(410px, 120px); /* 调整位置 */
     text-align: left; /* 左对齐 */
 }
 
 /* 按钮样式 */
 .container .btn01 {
-    padding: 24px 60px; /* 内边距 */
+    padding: 20px 100px; /* 内边距 */
     background-color: #007bff; /* 背景颜色 */
     color: white; /* 字体颜色 */
     border: none; /* 无边框 */
@@ -94,11 +157,11 @@
     font-size: 18px; /* 字体大小 */
     cursor: pointer; /* 鼠标指针样式 */
     margin: 15px; /* 按钮之间的间距 */
-    transform: translateX(-555px); /* 向左移动 */
+    transform: translate(-340px,150px); /* 向左移动 */
 }
 
 .container .btn02 {
-    padding: 24px 60px; /* 内边距 */
+    padding: 20px 100px; /* 内边距 */
     background-color: white; /* 背景颜色 */
     color: #007bff; /* 字体颜色 */
     border-radius: 15px; /* 圆角边框 */
@@ -106,19 +169,11 @@
     cursor: pointer; /* 鼠标指针样式 */
     margin: 15px; /* 按钮之间的间距 */
     border: 2px solid #007bff; /* 边框样式 */
-    transform: translateX(-520px); /* 向左移动 */
+    transform: translate(-320px,150px); /* 向左移动 */
 }
 
-/* 底部注释部分样式 */
-.footer {
-    margin-top: 50px; /* 顶部外边距 */
-    font-size: 16px; /* 字体大小 */
-    color: #888; /* 字体颜色 */
-}
 
-/* 图片样式 */
-.container img {
-    max-width: 100%; /* 最大宽度 */
-    height: auto; /* 高度自适应 */
-    margin-top: 20px; /* 顶部外边距 */
-}
+
+
+
+
